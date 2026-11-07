@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel · Pão Fraterno</title>
+  <meta name="description" content="Painel administrativo do Pão Fraterno: gerenciamento de avisos e da lista de itens para arrecadação." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin">
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html" aria-label="Pão Fraterno — início">
+        <img class="logo__marca" src="public/pao_fraterno_logo.png" alt="" />
+        <span>PÃO FRATERNO</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false"
+              aria-controls="nav-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Navegação principal">
+        <a class="nav-menu__link" href="index.html#inicio">Início</a>
+        <a class="nav-menu__link" href="index.html#ajude-doando">Ajude doando</a>
+        <a class="nav-menu__link" href="index.html#seja-voluntario">Seja voluntário</a>
+        <a class="nav-menu__link" href="index.html#quem-somos">Quem somos</a>
+      </nav>
+
+      <div class="nav-acoes">
+        <a class="sair" id="btn-sair" href="#">Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== PAINEL ===================== -->
+    <section class="painel container">
+      <div class="painel__cabecalho">
+        <h1>Painel administrativo</h1>
+        <p>Atualize a lista de mantimentos e o mural de avisos.</p>
+      </div>
+
+      <div class="abas" role="tablist" aria-label="Seções do painel">
+        <button class="aba is-ativa" type="button" role="tab"
+                aria-selected="true" data-aba="secao-avisos">
+          Gerenciador de avisos
+        </button>
+        <button class="aba" type="button" role="tab"
+                aria-selected="false" data-aba="secao-itens">
+          Gerenciador de itens p/ arrecadação
+        </button>
+      </div>
+
+      <!-- Aba: avisos -->
+      <div id="secao-avisos" class="painel-secao is-ativa" role="tabpanel">
+        <div class="painel-secao__topo">
+          <h2>Avisos publicados</h2>
+          <button class="btn-novo" type="button" id="btn-novo-aviso">+ Novo aviso</button>
+        </div>
+        <div class="tabela-wrap">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Data</th>
+                <th scope="col" class="col-acoes">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-avisos"><!-- render via painel.js --></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Aba: itens -->
+      <div id="secao-itens" class="painel-secao" role="tabpanel">
+        <div class="painel-secao__topo">
+          <h2>Itens para arrecadação</h2>
+          <button class="btn-novo" type="button" id="btn-novo-item">+ Novo item</button>
+        </div>
+        <div class="tabela-wrap">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Urgência</th>
+                <th scope="col" class="col-acoes">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-itens"><!-- render via painel.js --></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== MODAL: AVISO ===================== -->
+  <div class="modal" id="modal-aviso" role="dialog" aria-modal="true"
+       aria-labelledby="modal-aviso-titulo" aria-hidden="true">
+    <div class="modal__fundo" data-fechar-modal></div>
+    <div class="modal__caixa">
+      <div class="modal__topo">
+        <h2 id="modal-aviso-titulo">Novo aviso</h2>
+        <button class="modal__fechar" type="button" data-fechar-modal aria-label="Fechar">✕</button>
+      </div>
+      <form id="form-aviso" novalidate>
+        <div class="campo">
+          <label for="aviso-titulo">Título</label>
+          <input type="text" id="aviso-titulo" placeholder="Ex.: Montagem de kits na sexta" required />
+        </div>
+        <div class="campo">
+          <label for="aviso-data">Data</label>
+          <input type="text" id="aviso-data" placeholder="Ex.: Esta semana" />
+        </div>
+        <div class="campo">
+          <label for="aviso-conteudo">Conteúdo</label>
+          <textarea id="aviso-conteudo" rows="4" placeholder="Escreva o aviso…" required></textarea>
+        </div>
+        <div class="modal__acoes">
+          <button class="btn btn--secundario btn--pilula" type="button" data-fechar-modal>Cancelar</button>
+          <button class="btn btn--primario btn--pilula" type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== MODAL: ITEM ===================== -->
+  <div class="modal" id="modal-item" role="dialog" aria-modal="true"
+       aria-labelledby="modal-item-titulo" aria-hidden="true">
+    <div class="modal__fundo" data-fechar-modal></div>
+    <div class="modal__caixa">
+      <div class="modal__topo">
+        <h2 id="modal-item-titulo">Novo item</h2>
+        <button class="modal__fechar" type="button" data-fechar-modal aria-label="Fechar">✕</button>
+      </div>
+      <form id="form-item" novalidate>
+        <div class="campo">
+          <label for="item-nome">Nome do item</label>
+          <input type="text" id="item-nome" placeholder="Ex.: Macarrão" required />
+        </div>
+        <div class="campo">
+          <label for="item-categoria">Categoria</label>
+          <select id="item-categoria">
+            <option value="Alimentos">Alimentos</option>
+            <option value="Higiene">Higiene</option>
+            <option value="Roupas">Roupas</option>
+            <option value="Insumos">Insumos</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="item-urgencia">Urgência</label>
+          <select id="item-urgencia">
+            <option value="urgente">Urgente</option>
+            <option value="necessario" selected>Necessário</option>
+            <option value="suficiente">Suficiente</option>
+          </select>
+        </div>
+        <div class="modal__acoes">
+          <button class="btn btn--secundario btn--pilula" type="button" data-fechar-modal>Cancelar</button>
+          <button class="btn btn--primario btn--pilula" type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/painel.js"></script>
+</body>
+</html>

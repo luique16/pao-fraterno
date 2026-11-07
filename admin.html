@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar · Pão Fraterno</title>
+  <meta name="description" content="Área restrita do Pão Fraterno: acesso exclusivo da equipe organizadora." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin">
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="index.html" aria-label="Pão Fraterno — início">
+        <img class="logo__marca" src="public/pao_fraterno_logo.png" alt="" />
+        <span>PÃO FRATERNO</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false"
+              aria-controls="nav-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Navegação principal">
+        <a class="nav-menu__link" href="index.html#inicio">Início</a>
+        <a class="nav-menu__link" href="index.html#ajude-doando">Ajude doando</a>
+        <a class="nav-menu__link" href="index.html#seja-voluntario">Seja voluntário</a>
+        <a class="nav-menu__link" href="index.html#quem-somos">Quem somos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== LOGIN ===================== -->
+    <section class="login-tela">
+      <div class="login-cartao">
+        <div class="login-cartao__marca">
+          <img class="login-cartao__logo" src="public/pao_fraterno_logo.png" alt="" />
+          <span class="login-cartao__nome">PÃO FRATERNO</span>
+        </div>
+        <h1>Área restrita</h1>
+        <p class="login-cartao__sub">Acesso exclusivo da equipe organizadora.</p>
+
+        <p class="login-erro" id="login-erro" role="alert">
+          Usuário ou senha incorretos.
+        </p>
+
+        <form id="form-login" novalidate>
+          <div class="campo">
+            <label for="login-usuario">Usuário</label>
+            <input type="text" id="login-usuario" name="usuario"
+                   placeholder="admin" required autocomplete="username" />
+          </div>
+          <div class="campo">
+            <label for="login-senha">Senha</label>
+            <input type="password" id="login-senha" name="senha"
+                   placeholder="••••••••" required autocomplete="current-password" />
+          </div>
+          <button class="btn btn--primario" type="submit" style="width:100%;">ENTRAR</button>
+        </form>
+
+        <a class="login-voltar" href="index.html">← Voltar ao site</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

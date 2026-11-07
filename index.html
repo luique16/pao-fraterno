@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pão Fraterno · Comida, cuidado e comunidade em São Carlos</title>
+  <meta name="description" content="ONG de São Carlos que, toda sexta-feira, prepara sopas, marmitas e kits de higiene. Veja o que falta, doe via PIX ou seja voluntário — sem cadastro." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a class="logo" href="#inicio" aria-label="Pão Fraterno — início">
+        <img class="logo__marca" src="public/pao_fraterno_logo.png" alt="" />
+        <span>PÃO FRATERNO</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false"
+              aria-controls="nav-menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="nav-menu" class="nav-menu" aria-label="Navegação principal">
+        <a class="nav-menu__link" href="#inicio" aria-current="page">Início</a>
+        <a class="nav-menu__link" href="#ajude-doando">Ajude doando</a>
+        <a class="nav-menu__link" href="#seja-voluntario">Seja voluntário</a>
+        <a class="nav-menu__link" href="#quem-somos">Quem somos</a>
+        <a class="nav-menu__link nav-menu__link--admin" href="admin.html">Admin</a>
+      </nav>
+
+      <div class="nav-acoes">
+        <a class="btn-pix-nav" href="#doe-via-pix">
+          Doar via PIX
+        </a>
+        <a class="nav-admin" href="admin.html">Admin</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== INÍCIO / HERO ===================== -->
+    <section id="inicio" class="secao hero">
+      <div class="container hero__grade">
+        <div>
+          <span class="tag">ONG · São Carlos, SP</span>
+          <h1 class="hero__titulo">Conheça o <span>Pão Fraterno</span></h1>
+          <p class="hero__texto">
+            Comida, cuidado e comunidade: toda sexta-feira preparamos sopas,
+            marmitas e kits de higiene para quem mais precisa.
+          </p>
+          <div class="hero__acoes">
+            <a class="btn btn--primario" href="#ajude-doando">DOE AGORA</a>
+            <a class="btn btn--secundario" href="#seja-voluntario">SEJA VOLUNTÁRIO</a>
+          </div>
+        </div>
+
+        <div class="carrossel" data-carrossel aria-roledescription="carrossel" aria-label="Fotos das ações">
+          <div class="carrossel__trilho">
+            <div class="carrossel__slide" role="group" aria-label="1 de 3">
+              <span>FOTO DO CARROSSEL · 1 de 3</span>
+              <span class="carrossel__legenda">Distribuição de marmitas · sexta</span>
+            </div>
+            <div class="carrossel__slide" role="group" aria-label="2 de 3" aria-hidden="true">
+              <span>FOTO DO CARROSSEL · 2 de 3</span>
+              <span class="carrossel__legenda">Preparo das sopas na cozinha</span>
+            </div>
+            <div class="carrossel__slide" role="group" aria-label="3 de 3" aria-hidden="true">
+              <span>FOTO DO CARROSSEL · 3 de 3</span>
+              <span class="carrossel__legenda">Montagem dos kits de higiene</span>
+            </div>
+          </div>
+          <button class="carrossel__seta carrossel__seta--anterior" type="button" aria-label="Foto anterior">‹</button>
+          <button class="carrossel__seta carrossel__seta--proximo" type="button" aria-label="Próxima foto">›</button>
+          <div class="carrossel__pontos" role="tablist" aria-label="Selecionar foto">
+            <button class="carrossel__ponto is-ativo" type="button" aria-label="Ir para foto 1"></button>
+            <button class="carrossel__ponto" type="button" aria-label="Ir para foto 2"></button>
+            <button class="carrossel__ponto" type="button" aria-label="Ir para foto 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAIXA DE IMPACTO ===================== -->
+    <section class="impacto" aria-label="Indicadores de impacto">
+      <div class="container impacto__grade">
+        <div>
+          <p class="impacto__numero">+1.200</p>
+          <p class="impacto__rotulo">refeições distribuídas</p>
+        </div>
+        <div>
+          <p class="impacto__numero">40</p>
+          <p class="impacto__rotulo">voluntários ativos</p>
+        </div>
+        <div>
+          <p class="impacto__numero">Toda sexta</p>
+          <p class="impacto__rotulo">sopas, marmitas e kits</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE / MISSÃO / VALORES ===================== -->
+    <section class="secao">
+      <div class="container">
+        <p class="rotulo-secao">Quem somos</p>
+        <h2 class="titulo-secao">Sobre nós, missão e valores</h2>
+        <div class="cartoes">
+          <article class="cartao">
+            <div class="cartao__icone" aria-hidden="true">A</div>
+            <h3>Sobre nós</h3>
+            <p>Somos um projeto de voluntários que cuida de quem tem fome e frio em São Carlos.</p>
+          </article>
+          <article class="cartao">
+            <div class="cartao__icone" aria-hidden="true">M</div>
+            <h3>Nossa missão</h3>
+            <p>Garantir alimento, agasalho e higiene com dignidade, todas as semanas.</p>
+          </article>
+          <article class="cartao">
+            <div class="cartao__icone" aria-hidden="true">V</div>
+            <h3>Nossos valores</h3>
+            <p>Solidariedade, transparência e respeito a quem recebe e a quem doa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ROTINA DE SEXTA ===================== -->
+    <section class="secao rotina">
+      <div class="container">
+        <p class="rotulo-secao">Rotina de ações</p>
+        <h2 class="titulo-secao">Toda sexta a gente se encontra</h2>
+        <div class="rotina__grade">
+          <ol class="passos">
+            <li class="passo">
+              <span class="passo__numero">1</span>
+              <div>
+                <p class="passo__titulo">Preparo das sopas e marmitas</p>
+                <p class="passo__horario">Sexta · 14h às 16h</p>
+              </div>
+            </li>
+            <li class="passo">
+              <span class="passo__numero">2</span>
+              <div>
+                <p class="passo__titulo">Montagem dos kits de higiene</p>
+                <p class="passo__horario">Sexta · 16h às 17h</p>
+              </div>
+            </li>
+            <li class="passo">
+              <span class="passo__numero">3</span>
+              <div>
+                <p class="passo__titulo">Distribuição</p>
+                <p class="passo__horario">Sexta · 17h às 19h</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="cartao-mapa">
+            <div class="cartao-mapa__imagem" role="img" aria-label="Mapa com a localização da ONG">MAPA</div>
+            <h3>Venha fazer uma visita!</h3>
+            <p>Rua Exemplo, 000 · Jardim Lutfalla, São Carlos - SP</p>
+            <a class="btn btn--secundario btn--pilula"
+               href="https://maps.google.com/?q=São+Carlos+SP" target="_blank" rel="noopener">
+              Como chegar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AVISOS ===================== -->
+    <section class="secao">
+      <div class="container">
+        <p class="rotulo-secao">Mural</p>
+        <h2 class="titulo-secao">Avisos recentes</h2>
+        <div class="avisos" id="lista-avisos">
+          <!-- Preenchido por main.js a partir de AVISOS_MOCK -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== AJUDE DOANDO ===================== -->
+    <section id="ajude-doando">
+      <div class="secao-destaque">
+        <div class="container">
+          <h2 class="secao-destaque__titulo">Ajude doando</h2>
+          <p class="secao-destaque__texto">
+            Doe alimentos, agasalhos e kits de higiene, ou contribua via PIX.
+            Sem cadastro, em menos de um minuto.
+          </p>
+        </div>
+      </div>
+
+      <div class="secao">
+        <div class="container">
+          <p class="rotulo-secao">Passo a passo</p>
+          <h3 class="titulo-secao">Como funcionam as doações</h3>
+          <div class="passos-doacao">
+            <article class="passo-cartao">
+              <span class="passo-cartao__numero">1</span>
+              <div>
+                <h3>Veja o que falta</h3>
+                <p>A lista abaixo é atualizada pela equipe toda semana.</p>
+              </div>
+            </article>
+            <article class="passo-cartao">
+              <span class="passo-cartao__numero">2</span>
+              <div>
+                <h3>Doe do seu jeito</h3>
+                <p>Compre o item pedido ou copie a chave PIX.</p>
+              </div>
+            </article>
+            <article class="passo-cartao">
+              <span class="passo-cartao__numero">3</span>
+              <div>
+                <h3>Pronto!</h3>
+                <p>Entregue na sexta ou envie o PIX. Não precisa de conta.</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Cartão PIX -->
+          <div class="cartao-pix" id="doe-via-pix">
+            <div class="cartao-pix__qr" role="img" aria-label="Espaço reservado para o QR Code do PIX">
+              <!-- Espaço reservado: insira aqui o QR Code real (ex.: <img src="..."> ) -->
+              <span class="cartao-pix__qr-texto">QR Code</span>
+            </div>
+            <div>
+              <p class="cartao-pix__rotulo">Contribuição financeira</p>
+              <h3>Doe via PIX</h3>
+              <p class="cartao-pix__descricao">
+                Escaneie o QR Code ou copie a chave. O valor é você quem escolhe.
+              </p>
+              <div class="pix-chave">
+                <span class="pix-chave__valor" id="pix-chave">pix@paofraterno.org.br</span>
+                <button class="btn btn--primario" type="button"
+                        data-copiar-pix="pix@paofraterno.org.br">
+                  COPIAR CHAVE PIX
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista de itens -->
+      <div class="secao" style="padding-top: 0;">
+        <div class="container">
+          <div class="itens-cabecalho">
+            <div>
+              <p class="rotulo-secao">Esta semana</p>
+              <h3 class="titulo-secao" style="margin-bottom:0;">O que está faltando</h3>
+            </div>
+            <span class="itens-cabecalho__atualizado">Atualizado hoje</span>
+          </div>
+
+          <div class="filtros" data-filtros role="group" aria-label="Filtrar itens por categoria">
+            <button class="filtro is-ativo" type="button" data-categoria="Todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-categoria="Alimentos" aria-pressed="false">Alimentos</button>
+            <button class="filtro" type="button" data-categoria="Higiene" aria-pressed="false">Higiene</button>
+            <button class="filtro" type="button" data-categoria="Roupas" aria-pressed="false">Roupas</button>
+            <button class="filtro" type="button" data-categoria="Insumos" aria-pressed="false">Insumos</button>
+          </div>
+
+          <div class="lista-itens" id="lista-itens">
+            <!-- Preenchido por main.js a partir de ITENS_MOCK -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SEJA VOLUNTÁRIO ===================== -->
+    <section id="seja-voluntario">
+      <div class="secao-destaque">
+        <div class="container">
+          <h2 class="secao-destaque__titulo">Seja voluntário</h2>
+          <p class="secao-destaque__texto">
+            Toda sexta temos sopas, marmitas e kits para preparar.
+            Venha ajudar: não precisa de experiência.
+          </p>
+        </div>
+      </div>
+
+      <div class="secao">
+        <div class="container">
+          <div class="voluntario__intro">
+            <div>
+              <p class="rotulo-secao">Como funciona</p>
+              <h3 class="titulo-secao" style="margin-bottom:12px;">Como é ser voluntário</h3>
+              <p style="color: var(--cor-texto-suave); font-size: 1.0625rem;">
+                Você escolhe o horário e a tarefa: cozinhar, embalar, montar kits ou
+                ajudar na distribuição. Deixe seus dados e a equipe chama você pelo WhatsApp.
+              </p>
+            </div>
+            <div class="foto-placeholder" role="img" aria-label="Foto dos voluntários">FOTO DOS VOLUNTÁRIOS</div>
+          </div>
+
+          <!-- Formulário -->
+          <form class="form" id="form-voluntario" novalidate>
+            <h3>Quero ajudar</h3>
+
+            <div class="campo">
+              <label for="vol-nome">Nome</label>
+              <input type="text" id="vol-nome" name="nome" placeholder="Seu nome completo" required autocomplete="name" />
+            </div>
+
+            <div class="campo">
+              <label for="vol-whats">WhatsApp</label>
+              <input type="tel" id="vol-whats" name="whatsapp" placeholder="(16) 90000-0000" required autocomplete="tel" />
+            </div>
+
+            <div class="campo">
+              <label for="vol-email">E-mail (opcional)</label>
+              <input type="email" id="vol-email" name="email" placeholder="voce@email.com" autocomplete="email" />
+            </div>
+
+            <fieldset>
+              <legend>Em qual horário você quer ajudar?</legend>
+              <p class="campo__ajuda">Escolha um ou mais. Cada cartão mostra o que acontece naquele horário.</p>
+              <div class="horarios">
+                <label class="horario">
+                  <input type="checkbox" name="horario" value="14h-16h" />
+                  <span class="horario__periodo">Sexta · 14h às 16h</span>
+                  <span class="horario__titulo">Preparo das sopas e marmitas</span>
+                  <span class="horario__rotulo">O que acontece</span>
+                  <span class="horario__descricao">Lavar e cortar legumes, cozinhar a sopa e embalar as marmitas na cozinha.</span>
+                </label>
+                <label class="horario">
+                  <input type="checkbox" name="horario" value="16h-17h" />
+                  <span class="horario__periodo">Sexta · 16h às 17h</span>
+                  <span class="horario__titulo">Montagem dos kits de higiene</span>
+                  <span class="horario__rotulo">O que acontece</span>
+                  <span class="horario__descricao">Separar sabonete, escova e pasta de dente e montar os kits na mesa.</span>
+                </label>
+                <label class="horario">
+                  <input type="checkbox" name="horario" value="17h-19h" />
+                  <span class="horario__periodo">Sexta · 17h às 19h</span>
+                  <span class="horario__titulo">Distribuição</span>
+                  <span class="horario__rotulo">O que acontece</span>
+                  <span class="horario__descricao">Servir sopas e marmitas, entregar os kits e organizar a fila de quem chega.</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button class="btn btn--primario" type="submit" style="width:100%;">ENVIAR</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUEM SOMOS ===================== -->
+    <section id="quem-somos">
+      <div class="secao-destaque">
+        <div class="container">
+          <h2 class="secao-destaque__titulo">Quem somos</h2>
+          <p class="secao-destaque__texto">A história e as pessoas por trás do Pão Fraterno.</p>
+        </div>
+      </div>
+
+      <div class="secao">
+        <div class="container">
+          <div class="historia">
+            <div>
+              <p class="rotulo-secao">Nossa história</p>
+              <h3 class="titulo-secao" style="margin-bottom:12px;">De onde viemos</h3>
+              <p style="color: var(--cor-texto-suave); font-size: 1.0625rem;">
+                O Pão Fraterno nasceu da vontade de estudantes e moradores de São Carlos
+                de dividir comida e cuidado com quem precisa. Hoje, toda sexta-feira,
+                voluntários preparam sopas, marmitas e kits de higiene.
+              </p>
+            </div>
+            <div class="foto-placeholder" role="img" aria-label="Foto da ONG">FOTO</div>
+          </div>
+
+          <div style="margin-bottom:56px;">
+            <p class="rotulo-secao">Nosso propósito</p>
+            <h3 class="titulo-secao" style="margin-bottom:12px;">Para onde vamos</h3>
+            <p style="color: var(--cor-texto-suave); font-size: 1.0625rem; max-width: 70ch;">
+              Garantir que ninguém passe fome ou frio por falta de informação. Por isso,
+              mostramos com transparência o que falta, como doar e como ajudar.
+            </p>
+            <div class="valores">
+              <div class="valor">
+                <h4>Transparência</h4>
+                <p>Lista de mantimentos sempre atualizada.</p>
+              </div>
+              <div class="valor">
+                <h4>Simplicidade</h4>
+                <p>Doar e ajudar sem cadastro.</p>
+              </div>
+              <div class="valor">
+                <h4>Comunidade</h4>
+                <p>Feito por voluntários, para a cidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="rotulo-secao">Equipe</p>
+            <h3 class="titulo-secao">Conheça nossa equipe</h3>
+            <div class="equipe">
+              <div class="membro">
+                <div class="membro__avatar" aria-hidden="true"></div>
+                <p class="membro__nome">Nome Sobrenome</p>
+                <p class="membro__papel">Coordenação</p>
+              </div>
+              <div class="membro">
+                <div class="membro__avatar" aria-hidden="true"></div>
+                <p class="membro__nome">Nome Sobrenome</p>
+                <p class="membro__papel">Cozinha</p>
+              </div>
+              <div class="membro">
+                <div class="membro__avatar" aria-hidden="true"></div>
+                <p class="membro__nome">Nome Sobrenome</p>
+                <p class="membro__papel">Comunicação</p>
+              </div>
+              <div class="membro">
+                <div class="membro__avatar" aria-hidden="true"></div>
+                <p class="membro__nome">Nome Sobrenome</p>
+                <p class="membro__papel">Logística</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Voltar ao topo (fim da página) -->
+  <div class="voltar-topo-wrap">
+    <button class="voltar-topo" type="button"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      ↑ Voltar ao topo
+    </button>
+  </div>
+
+  <!-- ===================== RODAPÉ ===================== -->
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grade">
+        <div>
+          <div class="rodape__marca">
+            <img class="rodape__logo" src="public/pao_fraterno_logo.png" alt="" />
+            <p class="rodape__titulo-marca">PÃO FRATERNO</p>
+          </div>
+          <p>Comida, cuidado e comunidade em São Carlos.</p>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li>WhatsApp: (16) 90000-0000</li>
+            <li>Instagram: @paofraterno</li>
+            <li>E-mail: contato@paofraterno.org.br</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Navegue</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#ajude-doando">Ajude doando</a></li>
+            <li><a href="#seja-voluntario">Seja voluntário</a></li>
+            <li><a href="#quem-somos">Quem somos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Onde estamos</h4>
+          <ul>
+            <li>Rua Exemplo, 000</li>
+            <li>Jardim Lutfalla</li>
+            <li>São Carlos - SP</li>
+          </ul>
+        </div>
+      </div>
+      <p class="rodape__creditos">© 2026 Pão Fraterno · Projeto acadêmico SCC0260</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
