@@ -483,6 +483,9 @@ fieldset legend {
   .nav-acoes {
     gap: 12px;
   }
+  .btn-pix-nav {
+    display: none; /* No mobile, o PIX fica dentro da seção Ajude doando */
+  }
   .nav-admin {
     display: none; /* Admin aparece dentro do menu no mobile */
   }
